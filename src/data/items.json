@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "All the Light We Cannot See by Anthony Doerr",
+        "price": 25.99,
+        "imgUrl": "/imgs/atlwcs.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Frankenstein by Mary Shelley",
+        "price": 16.99,
+        "imgUrl": "/imgs/frankenstein.jpg"
+    },
+    {
+        "id": 3,
+        "name": "The Bell Jar by Sylvia Plath",
+        "price": 15.99,
+        "imgUrl": "/imgs/belljar.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Harry Potter and Order of the Phoenix by J.K. Rowling",
+        "price": 26.99,
+        "imgUrl": "/imgs/harrypotter.jpg"
+    }
+]
