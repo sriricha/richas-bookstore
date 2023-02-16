@@ -1,5 +1,8 @@
 export function About() {
-    return <h1>About
-        <body className="top">Hello!</body>
-    </h1>
+    return (
+        <div>
+            <h1>About</h1>
+            <p className="top">Hello!</p>
+        </div>
+    )
 }
