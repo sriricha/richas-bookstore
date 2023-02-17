@@ -1,6 +1,7 @@
 import { Button, Card } from "react-bootstrap"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
+import '../font.css'
 
 type StoreItemProps = {
     id: number
@@ -13,6 +14,7 @@ export function StoreItem({id, name, price, imgUrl} : StoreItemProps) {
     const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
     const quantity = getItemQuantity(id)
     return (
+    <div className='my-custom-font'>
     <Card className="h-100">
       <Card.Img
         variant="top"
@@ -27,9 +29,9 @@ export function StoreItem({id, name, price, imgUrl} : StoreItemProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
-              + Add To Cart
-            </Button>
+              <Button style={{ backgroundColor: 'thistle', color: 'navy' }} className="w-100" onClick={() => increaseCartQuantity(id)}>
+                + Add To Cart
+              </Button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
@@ -39,11 +41,11 @@ export function StoreItem({id, name, price, imgUrl} : StoreItemProps) {
                 className="d-flex align-items-center justify-content-center"
                 style={{ gap: ".5rem" }}
               >
-                <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+                <Button style={{ backgroundColor: 'thistle', color: 'navy' }} onClick={() => decreaseCartQuantity(id)}>-</Button>
                 <div>
                   <span className="fs-3">{quantity}</span> in cart
                 </div>
-                <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+                <Button style={{ backgroundColor: 'thistle', color: 'navy' }} onClick={() => increaseCartQuantity(id)}>+</Button>
               </div>
               <Button
                 onClick={() => removeFromCart(id)}
@@ -57,5 +59,6 @@ export function StoreItem({id, name, price, imgUrl} : StoreItemProps) {
         </div>
       </Card.Body>
     </Card>
+    </div>
   )
 }

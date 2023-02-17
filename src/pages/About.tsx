@@ -1,8 +1,14 @@
+import '../font.css'
+
 export function About() {
     return (
         <div>
-            <h1>About</h1>
-            <p className="top">Hello!</p>
+            <div className="my-custom-font">
+                <h1>About</h1>
+            </div>
+            <div className="my-custom-font-notbold">
+                <p>Hello!</p>
+            </div>
         </div>
     )
 }

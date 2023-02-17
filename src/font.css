@@ -1,0 +1,11 @@
+.my-custom-font {
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+.my-custom-font-notbold {
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    font-weight: 500px;
+}
